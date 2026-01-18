@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa6';
 
 const Contact = () => {
   const contacts = [
@@ -56,6 +57,7 @@ const Contact = () => {
 
             <Button variant="hero" size="xl" asChild>
               <a href="https://wa.me/5531971609089" target="_blank" rel="noopener noreferrer">
+                <FaWhatsapp className="w-10 h-10 mr-2" />
                 Fale pelo WhatsApp
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -84,15 +86,6 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* CNPJ Info */}
-            <div className="mt-8 p-4 bg-accent/10 rounded-xl border border-accent/20">
-              <h4 className="font-heading font-bold text-primary-foreground mb-2">Dados da Empresa</h4>
-              <p className="text-primary-foreground/70 text-sm">
-                <strong>CNPJ:</strong> 62.012.374/0001-84<br />
-                <strong>Razão Social:</strong> Ladora Transportes LTDA
-              </p>
             </div>
           </div>
         </div>

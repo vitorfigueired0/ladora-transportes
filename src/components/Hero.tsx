@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Shield, Clock, MapPin } from 'lucide-react';
+import { ArrowRight, Users, Clock, MapPin } from 'lucide-react';
 import heroTruck from '@/assets/hero-truck.jpg';
 
 const Hero = () => {
   const stats = [
     { value: '24h', label: 'Monitoramento', icon: Clock },
     { value: '100%', label: 'Cobertura Nacional', icon: MapPin },
-    { value: 'R$2.5M', label: 'Seguro por Carga', icon: Shield },
+    { value: 'Equipe', label: 'Especializada', icon: Users },
   ];
 
   return (
@@ -25,11 +25,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container-custom mx-auto px-4 sm:px-6 lg:px-8 pt-24">
         <div className="max-w-3xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full px-4 py-2 mb-6 animate-fade-in">
-            <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <span className="text-accent font-medium text-sm">Betim, MG • Atuação Nacional</span>
-          </div>
 
           {/* Headline */}
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-primary-foreground leading-tight animate-fade-in-up">
@@ -76,13 +71,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
-        <span className="text-primary-foreground/60 text-sm">Role para baixo</span>
-        <div className="w-6 h-10 border-2 border-primary-foreground/30 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-accent rounded-full animate-bounce" />
-        </div>
-      </div>
     </section>
   );
 };

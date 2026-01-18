@@ -1,4 +1,5 @@
-import { Shield, Phone, Mail } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+import { FaInstagram, FaWhatsapp } from 'react-icons/fa6';
 import ladoraLogo from '@/assets/ladora-logo.png';
 
 const Footer = () => {
@@ -10,16 +11,10 @@ const Footer = () => {
     { href: '#contato', label: 'Contato' },
   ];
 
-  const insurances = [
-    { title: 'RCTR-C', value: 'R$ 2.500.000', desc: 'Seguro contra acidentes' },
-    { title: 'RC-DC', value: 'R$ 2.500.000', desc: 'Seguro contra roubos' },
-    { title: 'RC-V', value: 'R$ 550.000', desc: 'Responsabilidade civil' },
-  ];
-
   return (
     <footer className="bg-navy pt-16 pb-8">
       <div className="container-custom mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12 border-b border-primary-foreground/10">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 pb-12 border-b border-primary-foreground/10">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
@@ -40,6 +35,26 @@ const Footer = () => {
               <Mail className="w-4 h-4" />
               ladoratransportes@gmail.com
             </div>
+            <div className="flex items-center gap-4 text-primary-foreground/70 mt-4">
+              <a
+                href="https://wa.me/5531971609089"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp Ladora Transportes"
+                className="hover:text-accent transition-colors"
+              >
+                <FaWhatsapp className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/ladoratransportes"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram Ladora Transportes"
+                className="hover:text-accent transition-colors"
+              >
+                <FaInstagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -56,23 +71,6 @@ const Footer = () => {
                 </a>
               ))}
             </nav>
-          </div>
-
-          {/* Insurances */}
-          <div className="lg:col-span-2">
-            <h4 className="font-heading font-bold text-primary-foreground mb-4 flex items-center gap-2">
-              <Shield className="w-5 h-5 text-accent" />
-              Apólices de Seguro
-            </h4>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {insurances.map((insurance, index) => (
-                <div key={index} className="p-4 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10">
-                  <span className="text-accent font-bold">{insurance.title}</span>
-                  <p className="text-primary-foreground font-bold text-lg">{insurance.value}</p>
-                  <p className="text-primary-foreground/60 text-sm">{insurance.desc}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 

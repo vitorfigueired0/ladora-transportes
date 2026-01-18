@@ -1,13 +1,6 @@
-import { Target, Eye, Heart } from 'lucide-react';
 import warehouseImg from '@/assets/warehouse.jpg';
 
 const About = () => {
-  const values = [
-    { icon: Target, title: 'Missão', description: 'Garantir soluções logísticas eficientes, seguras e personalizadas, contribuindo para o crescimento dos nossos clientes através do transporte de cargas com excelência em todo o Brasil.' },
-    { icon: Eye, title: 'Visão', description: 'Ser reconhecida pelos nossos clientes como referência em transporte de cargas, destacando-se pela qualidade dos serviços, inovação e confiança nas relações.' },
-    { icon: Heart, title: 'Valores', description: 'Precificação justa, flexibilidade, comprometimento, segurança, inovação, transparência, ética e valorização das pessoas.' },
-  ];
-
   return (
     <section id="sobre" className="section-padding bg-background relative overflow-hidden">
       {/* Decorative Element */}
@@ -41,20 +34,12 @@ const About = () => {
               somos reconhecidos pela nossa eficiência, compromisso e segurança em cada entrega.
             </p>
 
-            {/* Mission, Vision, Values */}
-            <div className="space-y-6">
-              {values.map((item, index) => (
-                <div key={index} className="flex gap-4 p-4 rounded-xl bg-card border border-border hover:shadow-custom transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-lg text-foreground mb-1">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Nosso propósito é garantir soluções logísticas eficientes, seguras e personalizadas, contribuindo para o
+              crescimento dos clientes e entregando excelência em todo o Brasil. Buscamos ser referência no setor pela
+              qualidade do serviço, inovação e confiança nas relações, sempre guiados por precificação justa,
+              flexibilidade, comprometimento, transparência, ética e valorização das pessoas.
+            </p>
           </div>
         </div>
       </div>
