@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LADORA TRANSPORTES - Design System
+   Cores: Azul profundo profissional + Laranja vibrante accent
+   Tipografia: Montserrat (headings) + Inter (body)
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Azul corporativo profundo */
+    --primary: 212 60% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Cinza suave */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 210 15% 93%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Laranja vibrante accent */
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 24 95% 53%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --navy: 212 60% 18%;
+    --navy-light: 212 50% 28%;
+    --orange: 24 95% 53%;
+    --orange-light: 24 95% 60%;
+    --orange-dark: 24 95% 45%;
+    --slate: 215 20% 35%;
+    --slate-light: 215 15% 55%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--primary)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--orange)) 0%, hsl(var(--orange-light)) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(var(--navy)) 0%, hsl(212 60% 12%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsla(var(--navy), 0.1);
+    --shadow-md: 0 8px 24px -8px hsla(var(--navy), 0.15);
+    --shadow-lg: 0 16px 48px -12px hsla(var(--navy), 0.2);
+    --shadow-accent: 0 8px 32px -8px hsla(var(--orange), 0.4);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 212 60% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 212 55% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 212 55% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 212 50% 18%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 212 45% 20%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 212 40% 22%;
+    --input: 212 40% 22%;
+    --ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+
+  .shadow-custom {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-custom-lg {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .shadow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
