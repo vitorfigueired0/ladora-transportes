@@ -21,12 +21,7 @@ const Services = () => {
       icon: MapPinned,
       title: 'Distribuição',
       description: 'Roteirização otimizada para entregas em todo o território nacional com menor custo.',
-    },
-    {
-      icon: Box,
-      title: 'Toyota (Just in Time)',
-      description: 'Especialistas em serviços para grandes indústrias com entregas programadas.',
-    },
+    }
   ];
 
   return (
@@ -49,7 +44,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}

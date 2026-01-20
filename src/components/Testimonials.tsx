@@ -44,15 +44,15 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`group p-6 lg:p-8 bg-card rounded-2xl shadow-custom hover:shadow-custom-lg transition-all duration-300 border border-border hover:border-accent/30 ${
+              className={`group flex h-full flex-col p-6 lg:p-8 bg-card rounded-2xl shadow-custom hover:shadow-custom-lg transition-all duration-300 border border-border hover:border-accent/30 ${
                 index === 0 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
               <Quote className="w-10 h-10 text-accent/30 mb-4" />
-              <p className="text-foreground text-lg leading-relaxed mb-6 italic">
+              <p className="text-foreground text-lg leading-relaxed mb-6 italic flex-1">
                 "{testimonial.quote}"
               </p>
-              <div className="flex items-center justify-between">
+              <div className="mt-auto flex items-center justify-between">
                 <div>
                   <span className="font-heading font-bold text-foreground">{testimonial.company}</span>
                 </div>

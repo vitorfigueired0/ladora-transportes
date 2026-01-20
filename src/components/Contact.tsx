@@ -55,7 +55,7 @@ const Contact = () => {
               ))}
             </div>
 
-            <Button variant="hero" size="xl" asChild>
+            <Button variant="hero" size="xl" asChild className='w-full'>
               <a href="https://wa.me/5531971609089" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp className="w-10 h-10 mr-2" />
                 Fale pelo WhatsApp

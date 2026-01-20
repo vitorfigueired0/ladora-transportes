@@ -14,7 +14,7 @@ const About = () => {
               <img
                 src={warehouseImg}
                 alt="Armazém Ladora Transportes"
-                className="w-full h-auto"
+                className="w-full h-[420px] sm:h-[480px] object-cover"
               />
             </div>
             {/* Decorative Box */}
@@ -40,6 +40,14 @@ const About = () => {
               qualidade do serviço, inovação e confiança nas relações, sempre guiados por precificação justa,
               flexibilidade, comprometimento, transparência, ética e valorização das pessoas.
             </p>
+
+            <div className="mt-10">
+              <h3 className="font-heading text-2xl text-foreground mb-3">Apólices e coberturas</h3>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Mantemos apólices ativas para proteger sua carga em todas as etapas do transporte, cobrindo acidentes,
+                roubos e responsabilidade civil de terceiros, com seguradoras de referência no mercado.
+              </p>
+            </div>
           </div>
         </div>
       </div>
