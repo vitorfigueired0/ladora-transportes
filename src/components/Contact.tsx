@@ -18,16 +18,16 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="section-padding bg-gradient-dark relative overflow-hidden">
+    <section id="contato" className="section-padding pb-24 sm:pb-16 bg-gradient-dark relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
       </div>
 
       <div className="container-custom mx-auto relative">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 min-w-0">
           {/* Left Side - Main Contact */}
-          <div>
+          <div className="min-w-0">
             <span className="text-accent font-semibold text-sm tracking-wider uppercase">Entre em Contato</span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl text-primary-foreground mt-3 mb-6">
               Solicite sua <span className="text-gradient">cotação</span>
@@ -42,14 +42,14 @@ const Contact = () => {
                 <a
                   key={index}
                   href={contact.link || '#'}
-                  className={`flex items-center gap-4 p-4 bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-xl hover:bg-primary-foreground/10 transition-all duration-300 ${!contact.link && 'pointer-events-none'}`}
+                  className={`flex items-center gap-4 p-4 pr-16 sm:pr-4 bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-xl hover:bg-primary-foreground/10 transition-all duration-300 ${!contact.link && 'pointer-events-none'}`}
                 >
                   <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
                     <contact.icon className="w-6 h-6 text-accent" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <span className="text-primary-foreground/60 text-sm">{contact.label}</span>
-                    <p className="text-primary-foreground font-medium">{contact.value}</p>
+                    <p className="text-primary-foreground font-medium break-words [overflow-wrap:anywhere]">{contact.value}</p>
                   </div>
                 </a>
               ))}
@@ -65,13 +65,13 @@ const Contact = () => {
           </div>
 
           {/* Right Side - Departments */}
-          <div className="bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-6 lg:p-8">
+          <div className="min-w-0 bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 rounded-2xl p-6 lg:p-8">
             <h3 className="font-heading font-bold text-2xl text-primary-foreground mb-6">Departamentos</h3>
             <div className="space-y-4">
               {departments.map((dept, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-primary-foreground/5 rounded-xl border border-primary-foreground/5 hover:border-accent/30 transition-all duration-300"
+                  className="p-4 pr-16 sm:pr-4 bg-primary-foreground/5 rounded-xl border border-primary-foreground/5 hover:border-accent/30 transition-all duration-300"
                 >
                   <h4 className="font-heading font-bold text-primary-foreground mb-2">{dept.name}</h4>
                   <div className="flex flex-col gap-1 text-sm">
